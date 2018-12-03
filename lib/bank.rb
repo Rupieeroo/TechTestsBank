@@ -5,21 +5,23 @@ class Bank
   def initialize
     @account = 0
     @history = []
+    @dates = []
   end
 
   def hello
     'Hello World'
   end
 
-  def deposit(money)
+  def deposit(money, date)
     @account += money
     @history.push(money)
-    print @history
+    @dates.push(date)
   end
 
-  def withdraw(money)
+  def withdraw(money, date)
     @account -= money
     @history.push(money)
+    @dates.push(date)
   end
 
   def statement
