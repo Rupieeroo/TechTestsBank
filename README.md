@@ -14,6 +14,7 @@ Linting is performed by Rubocop.
 
 These will be marked completed as the project develops.
 
+** In Progress **
 ```
 As a User,
 So that I can store money on a specific date,
