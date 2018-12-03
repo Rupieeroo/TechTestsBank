@@ -1,7 +1,9 @@
 class Bank
 
-  def initialize(account)
-    @account = account
+  attr_reader :account
+
+  def initialize
+    @account = 0
   end
 
   def hello
@@ -9,7 +11,7 @@ class Bank
   end
 
   def deposit(money)
-    account.push(money)
+    @account += money
   end
 
 end
