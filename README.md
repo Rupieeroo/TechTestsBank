@@ -6,7 +6,7 @@ This is a Tech test for week 10 of Makers Academy.
 
 This project is being written in Ruby. 
 
-Testing is being run by RSpec, project is written with TDD.
+Testing is being run by RSpec, project is written with TDD as a focus.
 
 Linting is performed by Rubocop.
 
