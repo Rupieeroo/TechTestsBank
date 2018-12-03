@@ -4,7 +4,7 @@ This is a Tech test for week 10 of Makers Academy.
 
 ## Tech
 
-This project is being written in Ruby. 
+This project is being written in Ruby.
 
 Testing is being run by RSpec, project is written with TDD as a focus.
 
@@ -20,13 +20,13 @@ As a User,
 So that I can store money on a specific date,
 I would like to be able to deposit money (1000).
 ```
-
+** In Progress **
 ```
 As a User,
 So that I can store more money on a different date,
 I would like to be able to deposit more money (2000).
 ```
-
+** In Progress **
 ```
 As a User,
 So that I can take money out of my account on a specific date,
