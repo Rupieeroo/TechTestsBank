@@ -11,7 +11,9 @@ end
 describe 'Depositing money' do
   it 'deposits money into a users account' do
     bank = open_account_and_deposit
+    p @history
     expect(bank.account).to eq(1000)
+    p @history
   end
 
   it 'deposits more money into a users account' do
@@ -26,5 +28,14 @@ describe 'Withdrawing money' do
     bank = open_account_and_deposit
     bank.withdraw(500)
     expect(bank.account).to eq(500)
+  end
+end
+
+describe 'Printing a statement' do
+  it 'saves the number of deposit or withdraw to a history variable' do
+    bank = open_account_and_deposit
+    bank.deposit(2000)
+    bank.withdraw(500)
+    expect(bank.history).to eq([1000, 2000, 500])
   end
 end
