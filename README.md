@@ -32,7 +32,7 @@ As a User,
 So that I can take money out of my account on a specific date,
 I would like to withdraw money (500).
 ```
-
+** In Progress **
 ```
 As a User,
 So that I can see my transaction history,
