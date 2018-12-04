@@ -24,6 +24,11 @@ describe 'Depositing money' do
     bank = open_account_and_deposit
     expect(bank.dates).to eq(['10/01/2012'])
   end
+
+  it 'adds the method, money and date to the trasactions array' do
+    bank = open_account_and_deposit
+    expect(bank.statement).to eq([{:amount=>1000, :date=>"10/01/2012", :method=>"deposit"}])
+  end
 end
 
 describe 'Withdrawing money' do
