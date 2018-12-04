@@ -27,7 +27,7 @@ describe 'Depositing money' do
 
   it 'adds the method, money and date to the trasactions array' do
     bank = open_account_and_deposit
-    expect(bank.statement).to eq([{:amount=>1000, :date=>"10/01/2012", :method=>"deposit"}])
+    expect(bank.transaction).to eq([{:credit=>1000, :date=>"10/01/2012", :method=>"deposit"}])
   end
 end
 
@@ -45,5 +45,17 @@ describe 'Printing a statement' do
     bank.deposit(2000, '13/01/2012')
     bank.withdraw(500, '14/01/2012')
     expect(bank.history).to eq([1000, 2000, 500])
+  end
+
+  it 'prints a full statement of transactions for the account' do
+    bank = open_account_and_deposit
+    bank.deposit(2000, '13/01/2012')
+    bank.withdraw(500, '14/01/2012')
+    expect(bank.statement).to eq(
+      "date || credit || debit || balance
+      14/01/2012 || || 500.00 || 2500.00
+      13/01/2012 || 2000.00 || || 3000.00
+      10/01/2012 || 1000.00 || || 1000.00"
+    )
   end
 end
