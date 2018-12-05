@@ -1,2 +1,6 @@
 Metrics/LineLength:
-  Max: 100
+  Max: 160
+
+Style/ConditionalAssignment:
+  Enabled: false
+# Line above added because Rubocop was making confusing demands on my conditional statement in the Bank class

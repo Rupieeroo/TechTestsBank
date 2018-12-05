@@ -14,25 +14,25 @@ Linting is performed by Rubocop.
 
 These will be marked completed as the project develops.
 
-** In Progress **
+** COMPLETED **
 ```
 As a User,
 So that I can store money on a specific date,
 I would like to be able to deposit money (1000).
 ```
-** In Progress **
+** COMPLETED **
 ```
 As a User,
 So that I can store more money on a different date,
 I would like to be able to deposit more money (2000).
 ```
-** In Progress **
+** COMPLETED **
 ```
 As a User,
 So that I can take money out of my account on a specific date,
 I would like to withdraw money (500).
 ```
-** In Progress **
+** COMPLETED **
 ```
 As a User,
 So that I can see my transaction history,
