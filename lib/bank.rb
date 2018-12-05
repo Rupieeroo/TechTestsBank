@@ -34,13 +34,14 @@ class Bank
   def statement
     # state =  "date || credit || debit || balance\n      #{@transactions[-1][:date]} || || #{@transactions[-1][:debit]}.00 || #{@account}.00\n      #{@transactions[-2][:date]} || #{@transactions[-2][:credit]}.00 || || #{@account + @transactions[-1][:debit]}.00\n      #{@transactions[-3][:date]} || #{@transactions[-3][:credit]}.00 || || #{@account + @transactions[-1][:debit] - @transactions[-2][:credit] }.00"
     # return state
-    puts "date || credit || debit || balance"
+    message_statement = "date || credit || debit || balance\n"
     @transactions.reverse.each do |transaction|
       if transaction[:credit] == nil
-        puts "#{transaction[:date]} || || #{transaction[:debit]}.00 || #{@account}.00"
+        message_statement += "#{transaction[:date]} || || #{transaction[:debit]}.00 || #{@account}.00\n"
       else
-        puts "#{transaction[:date]} || #{transaction[:credit]}.00 || || #{@account}.00"
+        message_statement += "#{transaction[:date]} || #{transaction[:credit]}.00 || || #{@account}.00\n"
       end
     end
+    return message_statement
   end
 end
