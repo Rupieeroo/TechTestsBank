@@ -27,7 +27,7 @@ describe 'Depositing money' do
 
   it 'adds the method, money and date to the trasactions array' do
     bank = open_account_and_deposit
-    expect(bank.transaction_method).to eq([{:balance=>1000, :credit=>1000, :date=>"10/01/2012", :method=>"deposit"}])
+    expect(bank.transaction_check).to eq([{:balance=>1000, :credit=>1000, :date=>"10/01/2012", :method=>"deposit"}])
   end
 end
 
