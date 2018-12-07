@@ -58,3 +58,7 @@ As a User,
 So that I can see my transaction history,
 I would like to print out a Bank Statement.
 ```
+
+## How to run the code
+
+To run this app, simple fork or clone this repo, run bundle install and access it in the command line.
