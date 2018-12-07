@@ -4,11 +4,13 @@ This is a Tech test for week 10 of Makers Academy.
 
 ## Tech
 
-This project is being written in Ruby.
+This project is being written in Vanilla Ruby.
 
-Testing is being run by RSpec, project is written with TDD as a focus.
+Testing is being run by RSpec, project is written with TDD as a focus - 11 examples, 0 failures.
 
-Linting is performed by Rubocop.
+Coverage is performed by SimpleCov - 86 / 86 LOC (100.0%) covered.
+
+Linting is performed by Rubocop - 6 files inspected, no offenses detected.
 
 ## User Criteria
 
