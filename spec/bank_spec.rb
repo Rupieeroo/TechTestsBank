@@ -29,6 +29,11 @@ describe 'Depositing money' do
     bank = open_account_and_deposit
     expect(bank.transaction_check).to eq([{ balance: 1000, credit: 1000, date: '10/01/2012', method: 'deposit' }])
   end
+
+  it 'Cannot deposit less than 1' do
+    bank = Bank.new
+    expect{ bank.deposit(-1, '10/01/2012') }.to raise_error('Deposit Error, please try again')
+  end
 end
 
 describe 'Withdrawing money' do
@@ -54,5 +59,10 @@ describe 'Printing a statement' do
     expect(bank.statement).to eq(
       "date || credit || debit || balance\n14/01/2012 || || 500.00 || 2500.00\n13/01/2012 || 2000.00 || || 3000.00\n10/01/2012 || 1000.00 || || 1000.00\n"
     )
+  end
+
+  it 'Cannot withdraw more money than you have' do
+    bank = Bank.new
+    expect{ bank.withdraw(1, '13/01/2012') }.to raise_error('Withdraw Error, please try again')
   end
 end
