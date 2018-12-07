@@ -32,7 +32,7 @@ describe 'Depositing money' do
 
   it 'Cannot deposit less than 1' do
     bank = Bank.new
-    expect{ bank.deposit(-1, '10/01/2012') }.to raise_error('Deposit Error, please try again')
+    expect { bank.deposit(-1, '10/01/2012') }.to raise_error('Deposit Error, please try again')
   end
 end
 
@@ -63,6 +63,6 @@ describe 'Printing a statement' do
 
   it 'Cannot withdraw more money than you have' do
     bank = Bank.new
-    expect{ bank.withdraw(1, '13/01/2012') }.to raise_error('Withdraw Error, please try again')
+    expect { bank.withdraw(1, '13/01/2012') }.to raise_error('Withdraw Error, please try again')
   end
 end

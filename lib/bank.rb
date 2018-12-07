@@ -14,25 +14,21 @@ class Bank
   end
 
   def deposit(money, date)
-    if money <= 0
-      raise 'Deposit Error, please try again'
-    else
-      @account += money
-      @history.push(money)
-      @dates.push(date)
-      @transactions << { method: 'deposit', credit: money, date: date, balance: @account }
-    end
+    raise 'Deposit Error, please try again' if money <= 0
+
+    @account += money
+    @history.push(money)
+    @dates.push(date)
+    @transactions << { method: 'deposit', credit: money, date: date, balance: @account }
   end
 
   def withdraw(money, date)
-    if @account < money
-      raise 'Withdraw Error, please try again'
-    else
-      @account -= money
-      @history.push(money)
-      @dates.push(date)
-      @transactions << { method: 'withdraw', debit: money, date: date, balance: @account }
-    end
+    raise 'Withdraw Error, please try again' if @account < money
+
+    @account -= money
+    @history.push(money)
+    @dates.push(date)
+    @transactions << { method: 'withdraw', debit: money, date: date, balance: @account }
   end
 
   def transaction_check
