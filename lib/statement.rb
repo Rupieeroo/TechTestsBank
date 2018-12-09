@@ -1,21 +1,6 @@
-require_relative 'bank'
-
+# This class prints the statement
 class Statement
-  attr_reader :bank, :transactions
-
-  def initialize
-    @thing = 'Something different'
-  end
-
-  def hello
-    'Hello World'
-  end
-
-  def call
-    @thing
-  end
-
-  def statement(statement)
+  def statement(transactions)
     message_statement = "date || credit || debit || balance\n"
     transactions.reverse_each do |tr|
       # Thought about refactoring this into a ternary operator, but it would have been too long.

@@ -6,11 +6,6 @@ describe 'Test working' do
     bank = Bank.new
     expect(bank.hello).to eq('Hello World')
   end
-
-  it 'Can call an instance method in another class' do
-    bank = Bank.new
-    expect(bank.call).to eq('Something different')
-  end
 end
 
 describe 'Depositing money' do

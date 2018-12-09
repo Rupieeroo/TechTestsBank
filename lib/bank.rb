@@ -1,7 +1,11 @@
 require_relative 'statement'
 # This is the Bank class
-class Bank < Statement
-  attr_reader :account, :history, :dates, :statement
+class Bank
+  attr_reader :account, :history, :dates
+
+  def hello
+    'Hello World'
+  end
 
   def initialize(statement = Statement.new)
     @account = 0
@@ -33,7 +37,7 @@ class Bank < Statement
     @transactions
   end
 
-  def statement(@transactions)
-    @statement.statement
+  def statement
+    @statement.statement(@transactions)
   end
 end
