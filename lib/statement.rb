@@ -3,6 +3,19 @@ require_relative 'bank'
 class Statement
   attr_reader :bank, :transactions
 
+  def initialize
+    @transactions
+    @thing = 'Something different'
+  end
+
+  def hello
+    'Hello World'
+  end
+
+  def call
+    @thing
+  end
+
   def statement
     message_statement = "date || credit || debit || balance\n"
     @transactions.reverse_each do |tr|

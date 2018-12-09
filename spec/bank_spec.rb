@@ -6,6 +6,11 @@ describe 'Test working' do
     bank = Bank.new
     expect(bank.hello).to eq('Hello World')
   end
+
+  it 'Can call an instance method in another class' do
+    bank = Bank.new
+    expect(bank.call).to eq('Something different')
+  end
 end
 
 describe 'Depositing money' do
@@ -56,7 +61,7 @@ describe 'Printing a statement' do
     bank = open_account_and_deposit
     bank.deposit(2000, '13/01/2012')
     bank.withdraw(500, '14/01/2012')
-    expect(bank.print_statement).to eq(
+    expect(bank.statement).to eq(
       "date || credit || debit || balance\n14/01/2012 || || 500.00 || 2500.00\n13/01/2012 || 2000.00 || || 3000.00\n10/01/2012 || 1000.00 || || 1000.00\n"
     )
   end

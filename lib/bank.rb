@@ -11,10 +11,6 @@ class Bank < Statement
     @statement = statement
   end
 
-  def hello
-    'Hello World'
-  end
-
   def deposit(money, date)
     raise 'Deposit Error, please try again' if money <= 0
 
@@ -37,7 +33,7 @@ class Bank < Statement
     @transactions
   end
 
-  def self.statement
-    statement
+  def statement
+    @statement.statement
   end
 end
