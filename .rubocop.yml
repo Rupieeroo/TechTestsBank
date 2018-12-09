@@ -3,4 +3,5 @@ Metrics/LineLength:
 
 Style/ConditionalAssignment:
   Enabled: false
-# Line above added because Rubocop was making confusing demands on my conditional statement in the Bank class
+# Line above added because Rubocop was making confusing demands
+# of my conditional statement in the Bank class
