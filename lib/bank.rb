@@ -33,7 +33,7 @@ class Bank < Statement
     @transactions
   end
 
-  def statement
+  def statement(@transactions)
     @statement.statement
   end
 end

@@ -4,7 +4,6 @@ class Statement
   attr_reader :bank, :transactions
 
   def initialize
-    @transactions
     @thing = 'Something different'
   end
 
@@ -16,9 +15,9 @@ class Statement
     @thing
   end
 
-  def statement
+  def statement(statement)
     message_statement = "date || credit || debit || balance\n"
-    @transactions.reverse_each do |tr|
+    transactions.reverse_each do |tr|
       # Thought about refactoring this into a ternary operator, but it would have been too long.
       if tr[:credit].nil?
         message_statement += "#{tr[:date]} || || #{tr[:debit]}.00 || #{tr[:balance]}.00\n"
